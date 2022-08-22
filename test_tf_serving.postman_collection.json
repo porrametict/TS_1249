@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "b5b5f1ff-4388-4752-84f0-512ee3634818",
+		"name": "tf_serving",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://crawler.bigstream.cloud:8501/v1/models/tf_model",
+					"protocol": "http",
+					"host": [
+						"crawler",
+						"bigstream",
+						"cloud"
+					],
+					"port": "8501",
+					"path": [
+						"v1",
+						"models",
+						"tf_model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "predict",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"instances\": [\r\n    0.5,\r\n    0.4,\r\n    0.6\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://crawler.bigstream.cloud:8501/v1/models/tf_model:predict",
+					"protocol": "http",
+					"host": [
+						"crawler",
+						"bigstream",
+						"cloud"
+					],
+					"port": "8501",
+					"path": [
+						"v1",
+						"models",
+						"tf_model:predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "version1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://crawler.bigstream.cloud:8501/v1/models/tf_model/versions/1",
+					"protocol": "http",
+					"host": [
+						"crawler",
+						"bigstream",
+						"cloud"
+					],
+					"port": "8501",
+					"path": [
+						"v1",
+						"models",
+						"tf_model",
+						"versions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "version2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://crawler.bigstream.cloud:8501/v1/models/tf_model/versions/2",
+					"protocol": "http",
+					"host": [
+						"crawler",
+						"bigstream",
+						"cloud"
+					],
+					"port": "8501",
+					"path": [
+						"v1",
+						"models",
+						"tf_model",
+						"versions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "predict v1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"instances\": [\r\n    \"The movie was great!\",\r\n    \"The movie was okay.\",\r\n    \"The movie was terrible...\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://crawler.bigstream.cloud:8501/v1/models/tf_model/versions/1:predict",
+					"protocol": "http",
+					"host": [
+						"crawler",
+						"bigstream",
+						"cloud"
+					],
+					"port": "8501",
+					"path": [
+						"v1",
+						"models",
+						"tf_model",
+						"versions",
+						"1:predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "predict v1 with label",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"instances\": [\r\n    \"The movie was great!\",\r\n    \"The movie was okay.\",\r\n    \"The movie was terrible...\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://crawler.bigstream.cloud:8501/v1/models/tf_model/labels/version_one:predict",
+					"protocol": "http",
+					"host": [
+						"crawler",
+						"bigstream",
+						"cloud"
+					],
+					"port": "8501",
+					"path": [
+						"v1",
+						"models",
+						"tf_model",
+						"labels",
+						"version_one:predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "predict v2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"instances\": [\r\n    0.5,\r\n    0.4,\r\n    0.6\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://crawler.bigstream.cloud:8501/v1/models/tf_model/versions/2:predict",
+					"protocol": "http",
+					"host": [
+						"crawler",
+						"bigstream",
+						"cloud"
+					],
+					"port": "8501",
+					"path": [
+						"v1",
+						"models",
+						"tf_model",
+						"versions",
+						"2:predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "predict v2 with label",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"instances\": [\r\n    0.5,\r\n    0.4,\r\n    0.6\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://crawler.bigstream.cloud:8501/v1/models/tf_model/labels/version_two:predict",
+					"protocol": "http",
+					"host": [
+						"crawler",
+						"bigstream",
+						"cloud"
+					],
+					"port": "8501",
+					"path": [
+						"v1",
+						"models",
+						"tf_model",
+						"labels",
+						"version_two:predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
